@@ -1,0 +1,19 @@
+﻿@model Loja.Models.Produto
+
+@{
+    ViewData["Title"] = "Detalhes do Produto";
+}
+
+<h2>Detalhes do Produto</h2>
+
+<div class="card p-3 mb-3">
+    <p><strong>ID:</strong> @Model.Id</p>
+    <p><strong>Nome:</strong> @Model.Nome</p>
+    <p><strong>Preço:</strong> @Model.Preco.ToString("C")</p>
+    <p><strong>Categoria:</strong> @Model.Categoria</p>
+    <p><strong>Em Estoque:</strong> @(Model.EmEstoque ? "Sim" : "Não")</p>
+    <p><strong>Data de Cadastro:</strong> @Model.DataCadastro.ToString("dd/MM/yyyy")</p>
+</div>
+
+<a asp-action="Index" class="btn btn-primary">Voltar à Lista</a>
+
